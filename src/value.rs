@@ -1467,7 +1467,6 @@ impl fmt::Display for Value {
             Value::Num(n) => n.grid_string().fmt(f),
             #[cfg(feature = "bytes")]
             Value::Byte(b) => b.grid_string().fmt(f),
-
             Value::Complex(c) => c.grid_string().fmt(f),
             Value::Box(v) => v.grid_string().fmt(f),
             Value::Char(c) if c.rank() < 2 => c.fmt(f),
